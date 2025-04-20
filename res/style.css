@@ -1,0 +1,169 @@
+.sitemenu {
+  border: 1px inset rgb(166, 224, 185);
+  background-color: rgb(219, 234, 208);
+  text-align: left;
+  color: white;
+  padding: 3px;
+  text-align: left;
+  text-decoration: none;
+  display: block;
+}
+
+div.sitemenu a:link, div.sitemenu a:visited {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #ed645b;
+  color: rgb(247, 231, 231);
+  font-weight: bold;
+  box-shadow: 5px 2px 10px 1px rgba(53, 52, 52, 0.7);
+}
+
+
+/* External Link Style */
+div.sitemenu a.extlink:link, div.sitemenu a.extlink:visited {
+
+  color: rgb(240, 162, 184);
+  background-color: hsl(0, 80%, 44%);
+  font-weight:normal;
+  font-size: xx-small;
+  box-shadow: none;
+}
+div.sitemenu a.extlink {
+  position: relative;
+  padding-right: 20px;
+}
+div.sitemenu a.extlink::after {
+  content: "↗";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #beb673;
+  font-weight: bold;
+}
+div.sitemenu a.extlink:hover:after {
+  font-size: 30px;
+  color: #ffef60;
+  font-weight: bold;
+}
+div.sitemenu a.extlink:hover {
+  background-color: #ee886f;
+  color: #282824;
+  font-weight: bold;
+}
+/* External Link Style */
+
+
+
+div.sitemenu a:hover {
+  background-color: #ee886f;
+  color: rgb(44, 19, 16);
+  box-shadow: none;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url("../images/UJ-Logo.png");
+  background-repeat: no-repeat;
+  background-size:100%;
+  background-attachment:fixed;
+  background-color: rgb(214, 217, 193);
+  background-blend-mode:lighten;
+  font-size: large;
+}
+
+a{
+background-color: transparent;
+}
+
+a:link, a:visited {
+  background-color: #f6a39d;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* a:link {
+    color: green;
+}
+
+a:visited {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+} */
+
+a:hover {
+    color: darkblue;
+    background-color: yellow;
+    text-decoration: underline;
+  }
+
+  a:active {
+    color: yellow;
+    background-color: red;
+    text-decoration: underline;
+  }
+
+
+table{
+  width: 60%;
+  border-color: #f44336;
+  border-width: 2px;
+  border-style: solid;
+  border-spacing: 10px;
+}
+
+tr:hover {
+  background-color: #aa6685;
+}
+
+td:hover{
+  background-color: #cb1717;
+  font-weight: bolder;
+}
+
+table,th, td{
+  border: 1px solid rgb(56, 161, 58);
+}
+
+
+td,th{
+  padding: 20px;
+  /* padding-top: 50px; */
+  /* padding: 10px 50px 100px 3px; */
+}
+
+
+th{
+  border-color: #f49e36;
+  border-width: 3px;
+  border-style: dotted;
+}
+
+td{
+  border-color: #52f436;
+  border-width: 2px;
+  border-style: dotted;
+
+}
+
+
+/* tr:nth-child(even) {
+  background-color: rgba(150, 212, 212, 0.4);
+}
+
+th:nth-child(even),td:nth-child(even) {
+  background-color: rgba(150, 212, 212, 0.4);
+} */
+
+caption {
+  display: table-caption;
+  color: darkgreen;
+  text-align: center;
+  font-weight: bold;
+}
