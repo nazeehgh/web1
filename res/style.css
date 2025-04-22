@@ -111,10 +111,9 @@ a:hover {
 
 
 table{
-  width: 60%;
+  width: 900px;
   border-color: #f44336;
   border-width: 2px;
-  border-style: solid;
   border-spacing: 10px;
 }
 
@@ -123,12 +122,13 @@ tr:hover {
 }
 
 td:hover{
-  background-color: #cb1717;
+  color: yellow;
+  background-color: #17cb74;
   font-weight: bolder;
 }
 
 table,th, td{
-  border: 1px solid rgb(56, 161, 58);
+  border: 5px dotted rgb(56, 161, 58);
 }
 
 
