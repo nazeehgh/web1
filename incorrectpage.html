@@ -1,22 +1,62 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="icon" type="image/x-icon" href="images/favicon.ico"> -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="res/style.css">
+    <link rel="stylesheet" href="res/navStyle.css">
+    <meta name="description" content="Web Development 1 - Course">
+    <meta name="keywords" content="HTML,CSS,JS">
+    <meta name="author" content="Professor Nazeeh Ghatasheh">
     <title>My Simple Webpage 22</title>
   </head>
   <body>
-<!--Page Header Start-->
-<div class="sitemenu">
+<!--Nav Bar Start-->
+<nav class="navbar">
   <a href="index.html">Home</a>
-  <a href="links.html">Links</a>
-  <a href="tables.html">Tables</a>
-  <a href="picture.html">Picture</a>
-  <a href="lists.html">Lists</a>
-  <a href="blockinline.html">Block-Inline</a>
-  <a href="class.html">Class</a>
-  |||
-  <a class="extlink" href="https://www.interviewbit.com/html-cheat-sheet/" target="_blank">HTML Cheat Sheet</a>
+  <div class="dropdown">
+    <button class="dropbtn">HTML
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="links.html">Links</a>
+      <a href="tables.html">Tables</a>
+      <a href="picture.html">Picture</a>
+      <a href="lists.html">Lists</a>
+      <a href="blockinline.html">Block-Inline</a>
+      <a href="class.html">Class</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">CSS
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Comming Soon</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">JS
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Comming Soon</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">External Links
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a class="extlink" href="https://www.interviewbit.com/html-cheat-sheet/" target="_blank" title="External">HTML Cheat Sheet <i class="fa fa-external-link"></i></a>
+    </div>
+  </div>
 </div>
-<!--Page Header End-->
+</nav>
+<!--Nav Bar End-->
 
     <h1>Welcome to My Webpage</h2>
     <p>This is a paragraph with some <strong>bold text</i> inside it.</p>
