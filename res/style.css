@@ -167,3 +167,21 @@ caption {
   text-align: center;
   font-weight: bold;
 }
+
+.web1{
+  /* width: 20%;
+  float: left; */
+  color: red;
+  /* padding-right: 30%; */
+  padding: 20px;
+  text-align: right;
+}
+
+.cl2{
+  background-color: yellow;
+
+}
+
+#div2{
+  color: blue;
+}
