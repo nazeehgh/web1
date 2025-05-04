@@ -1,0 +1,38 @@
+p{
+    color: red;
+    background-color:grey;
+}
+
+h1, h2, h3, p {
+    color:orange;
+}
+
+
+
+p em{
+    text-decoration: underline;
+    font-style:italic;
+}
+
+li li{
+    font-size:1em;
+}
+
+li{
+    font-size:2em;
+}
+
+.myStyle_1 {
+    text-align: center;
+    color: green;
+}
+
+#myStyle_1 {
+    text-align: center;
+    color: blue;
+}
+
+.myStyle_2{
+   font-size:1em;
+   background-color:red;
+}
