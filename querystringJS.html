@@ -12,10 +12,10 @@
     <meta name="keywords" content="HTML,CSS,JS">
     <meta name="author" content="Professor Nazeeh Ghatasheh">
 
-    <title>Web 1 Course - Main Page</title>
+    <title>Get Query String Parameters using JavaScript</title>
 </head>
 <body>
-<!--Nav Bar Start-->
+    <!--Nav Bar Start-->
     <nav class="navbar">
         <a href="index.html">Home</a>
         <div class="dropdown">
@@ -76,24 +76,37 @@
 </nav>
 <!--Nav Bar End-->
 
-<!-- <nav>  
-    <a href="/oop/">Learn OOPs</a> |
-    <a href="/c++/">Learn C++</a> |
-    <a href="/os/">Learn Operating System</a> |
-  </nav> -->
+
+    <form>
+        <input type="text" name="txt1">
+        <input type="text" name="txt2">
+        <input type="submit">
+    </form>
+
+    <div id="output"></div>
+
+    <script type="text/javascript">
+        // You may get Query String Parameters using JavaScript
+        // REFERENCE: https://sentry.io/answers/how-to-get-values-from-urls-in-javascript/
+        const searchParams = new URLSearchParams(window.location.search);
+        
+        // check if a query parameter exists  and log the result and value
+        console.log(searchParams.has('txt1')); // true
+        console.log(searchParams.get('txt1')); // 
+        
+        //loop through all parameters and log to console
+        for (const param of searchParams) {
+            console.log(param);
+        }
 
 
-
-
-    <ul>
-        <item>
-            <a href="https://www.favicon.cc/">Favicon.cc</a>
-        </item>
-        <item>
-            <a href="/web1/links.html">My bookmark 1</a>
-        </item>
-    </ul>
-
-    <a href="/abc.html">ABC</a>
+        // You can print on the page using the following script
+        if (searchParams.has('txt1')) {
+                const txt1Value = searchParams.get('txt1');
+                document.getElementById('output').innerHTML = `Value of txt1: <strong>${txt1Value}</strong>`;
+            } else {
+                document.getElementById('output').innerText = 'txt1 parameter not found in URL.';
+            }
+    </script>
 </body>
 </html>
