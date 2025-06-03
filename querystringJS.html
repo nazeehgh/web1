@@ -77,15 +77,23 @@
 <!--Nav Bar End-->
 
 
-    <form>
-        <input type="text" name="txt1">
+    <form method="get">
+        <input type="text" name="txt1" id="id1">
         <input type="text" name="txt2">
+        <input type="file">
         <input type="submit">
     </form>
+
+    <p id ="p1"></p>
 
     <div id="output"></div>
 
     <script type="text/javascript">
+
+const x1 = "this is var 1";
+document.getElementById("p1").innerHTML = `THIs one<b>${x1}</b>`;
+
+
         // You may get Query String Parameters using JavaScript
         // REFERENCE: https://sentry.io/answers/how-to-get-values-from-urls-in-javascript/
         const searchParams = new URLSearchParams(window.location.search);
@@ -105,7 +113,7 @@
                 const txt1Value = searchParams.get('txt1');
                 document.getElementById('output').innerHTML = `Value of txt1: <strong>${txt1Value}</strong>`;
             } else {
-                document.getElementById('output').innerText = 'txt1 parameter not found in URL.';
+                // document.getElementById('output').innerText = 'txt1 parameter not found in URL.';
             }
     </script>
 </body>
