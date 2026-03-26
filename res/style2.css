@@ -1,0 +1,13 @@
+body{
+    background-color: blanchedalmond;
+}
+h1{
+    color: darkorange;
+}
+
+a{
+    background-color: black;
+}
+a:visited{
+    color: brown;
+}
