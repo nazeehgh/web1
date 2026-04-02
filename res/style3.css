@@ -1,0 +1,12 @@
+h1{
+    color: orange;
+}
+
+a:visited{
+    color:lightblue;
+}
+
+a:hover{
+    color: red;
+    font-size: larger;
+}
