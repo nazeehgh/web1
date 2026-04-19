@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML IDs</title>
+
+    <style>
+        #p1 {
+            background-color: chartreuse;
+        }
+    
+        #p2 {
+            background-color: blueviolet;
+        }
+    
+        .c1 {
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+
+    <p class="c1" id="p1">Lorem ipsum dolor sit amet.</p>
+    <p id="p2" class="c1">Lorem ipsum dolor sit amet.</p>
+    <p class="c1"  id="p3">Lorem ipsum dolor sit amet.</p>
+    <p class="c1"  id="p4">Lorem ipsum dolor sit amet.</p>
+
+<script>
+    document.getElementById("p3").innerText = "This is p33333";
+    // document.getElementsByClassName("c1").innerText = "This is a class (c1)";
+
+</script>
+    
+</body>
+</html>
