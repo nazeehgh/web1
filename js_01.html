@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Intro</title>
+</head>
+<body>
+
+    <div id="myDiv1" ondblclick="document.write('Hello...');">
+Lorem ipsum dolor <script></script> sit amet consectetur adipisicing elit. Quia, praesentium!
+    </div>
+    <div id="myDiv2">
+Lorem ipsum dolor sit amet.
+    </div>
+
+    <button onclick="alert('You clicked the button...');">Click Me</button>
+    <button onclick="document.getElementById('myDiv2').innerHTML='You <b>clikced</b> on button 2.';">Write innerHTML</button>
+    <button onclick="document.getElementById('myDiv2').innerText='You <b>clikced</b> on button 2.';">Write innerText</button>
+    <button onclick="document.write('<table ><tr><td>Cell1</td><td>Cell1</td></tr></table>')">Write a Table</button>
+    <input type="text" onkeypress="document.getElementById('myDiv2').innerText +='Abc';">
+    <button onclick="myFun2();">Call myFun</button>
+
+
+    <script>
+        function myFun(){
+            //return 3;
+            alert('testing fun 1');
+        }
+        function myFun2(){
+            document.getElementById('myDiv1').style = 'color:red;';
+        }
+
+    </script>
+</body>
+</html>

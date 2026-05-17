@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb - JS</title>
+</head>
+<body>
+
+    <H1>This is my Light Bulb</H1>
+    <p id="p1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, dignissimos?
+    </p>
+    
+<img id="light" onclick="toggleBtn();" src="images/pic_bulboff.gif" alt="Bulb Image">
+
+<br><br>
+<button onclick="turnON();">Tun ON</button>
+<button onclick="turnOFF();">Turn OFF</button>
+
+
+<script >
+    f = false;
+    function toggleBtn() {
+
+        if (f) {
+            document.getElementById('light').src = "images/pic_bulboff.gif";
+            f = false;
+        } else {
+            document.getElementById('light').src = "images/pic_bulbon.gif";
+            f = true;
+        }
+
+    }
+
+
+    function turnON() {
+        document.getElementById('light').src = "images/pic_bulbon.gif";
+
+        document.getElementById('p1').style.fontSize = '24px';
+    }
+
+    function turnOFF() {
+        document.getElementById('light').src = "images/pic_bulboff.gif";
+        document.getElementById('p1').style.fontSize = '10px';
+
+    }
+</script>
+
+<script src="res/javaScript.js">
+
+</script>
+
+</body>
+</html>
