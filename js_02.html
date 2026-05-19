@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Examples 02</title>
+</head>
+<body>
+
+    <script>
+        // const x =6;
+        function fun01(){
+             x = 4;
+             y = 5;
+            document.getElementById('p1').innerText = x + y ;
+        }
+        
+    </script>
+
+
+
+    <h1>Heading 1 - JS</h1>
+
+    <p id="p1"></p>
+
+    <input type="text" id="t1" placeholder="Input 1">
+    <input type="text" id="t2" placeholder="Input 2">
+
+    <button onclick="document.getElementById('p1').innerText = document.getElementById('t1').value * document.getElementById('t2').value;">Change Element Content</button>
+
+    <button onclick="document.write('this is doc .write');">Doc Write()</button>
+    <button onclick="console.log('this is from console.write()');">Console Write</button>
+
+    <button onclick="print()";>Print This Page</button>
+
+    <hr>
+
+    <button onclick="fun01();">JS Variables</button>
+
+
+
+    
+</body>
+</html>
