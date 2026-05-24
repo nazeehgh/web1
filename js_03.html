@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Examples 03</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+
+
+    <button onclick="fun01();">Add to P1</button>
+    <button onclick="fun02();">This is F2</button>
+
+
+    <script>
+        let x = 3;
+
+        // let x = 20; // this is an incorrect declaration. re-declaration
+
+        function fun01(){
+            // x = 5;   // access the global variable and change it
+            let x = 4;  // local BLOCK variable
+            document.getElementById('p1').innerText = 'X variable = ' + x ;
+
+            // let x = 20; // this is an incorrect declaration. re-declaration
+                }
+
+        function fun02(){
+
+            // let x;
+            $ = ' this is a $ variable';
+            document.getElementById('p2').innerText = 'X variable = ' + x + $;
+            
+                }
+
+
+                
+
+        
+
+
+    </script>
+
+
+</body>
+</html>

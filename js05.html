@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 05</title>
+</head>
+<body>
+  
+    <span id="s1"></span>
+
+    <button onclick="checkValue()">Check Value</button>
+
+
+    <script>
+        let x = 4, y = 2;
+    // document.getElementById('s1').innerText = 2 ** 3;
+    // document.getElementById('s1').innerText = 2 % 3;
+    document.getElementById('s1').innerText = ++x;
+    // document.getElementById('s1').innerText = x++;
+    // document.getElementById('s1').innerText = 2 % 3;
+
+
+    // y += 4;   y = y + 4;
+
+
+    function checkValue() {
+        x = 3, y ='3';    
+        document.getElementById('s1').innerText = x === y;
+
+    }
+
+    x = 6, y = '6'; 
+document.getElementById('s1').innerText = x !== y ;
+// document.getElementById('s1').innerText = x != y;
+
+// && || !   
+    </script>
+
+
+</body>
+</html>
