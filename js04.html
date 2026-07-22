@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 04</title>
+
+    <style>
+    div{
+        background-color: lightblue;
+        color: darkgoldenrod;
+        font-size: 20px;
+        padding: 10px;
+    }
+    </style>
+</head>
+<body>
+    <h1>JavaScript 04</h1>
+
+    <div id="d1">Lorem ipsum dolor sit amet.</div>
+    <nav></nav>
+    <address></address>
+    <article></article>
+    <button onclick="fun01()">Click Here</button>
+    <button onclick="fun02()">Click Here 2</button>
+
+
+    <script>
+
+        let gX = 1000;
+
+        const YY = 2000;
+
+        // gX = 'test 2';
+
+
+        function fun01(){
+
+            let lX = 500;
+            document.getElementById('d1').innerText = gX  + lX + ' part 1 end.';
+            document.getElementById('d1').innerText += ' || gX variable = ' + gX  + lX;
+            document.getElementById('d1').innerText += ' || gX variable = ' + (gX  + lX);
+}
+
+
+function fun02(){
+
+    let gX = 2; // local variable with the same name as global variable. This is called SHADOWING. The local variable will be used in this function instead of the global variable.
+    // let YY = 10; // this is an incorrect declaration. re-declaration of a constant variable. This will cause an error. 
+    document.getElementById('d1').innerText = 'This is lX = ' + lX;  //accessing local variable error.
+}
+
+    </script>
+
+</body>
+</html>
