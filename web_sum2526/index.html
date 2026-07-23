@@ -6,6 +6,36 @@
     <title>Web Summer 2025-2026 Files</title>
 </head>
 <body>
-    
+
+    <h1>Pages in the Folder</h1>
+   
+    <script>
+async function loadPages() {
+    try {
+        const response = await fetch("/api/pages");
+        const files = await response.json();
+
+        const list = document.getElementById("pageList");
+        list.innerHTML = "";
+
+        files.forEach(file => {
+            const li = document.createElement("li");
+            const a = document.createElement("a");
+
+            a.href = "pages/" + file;
+            a.textContent = file.replace(".html", "");
+
+            li.appendChild(a);
+            list.appendChild(li);
+        });
+    } catch (err) {
+        document.getElementById("pageList").innerHTML =
+            "<li>Unable to load page list.</li>";
+        console.error(err);
+    }
+}
+
+loadPages();
+    </script>
 </body>
 </html>
