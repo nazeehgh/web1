@@ -1,40 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tables</title>
 
     <style>
-        td{
+        td,
+        th {
             border: 1px solid black;
+        }
+
+        /* body {
+            background-color: green;
+        } */
+
+        th {
+            background-color: darkcyan;
+        }
+
+        .myclass1 {
+            background-color: yellow;
         }
     </style>
 </head>
+
 <body>
 
     <table style="border: 1px solid black;">
+        <caption>Table caption test</caption>
+
         <tr>
-            <td>A</td> <td rowspan="3">B</td>  <td>C</td>
+            <th>Col 1</th>
+            <th>Col 2</th>
+            <th>Col 3</th>
+        </tr>
+
+        <tr>
+            <td>A</td>
+            <td rowspan="3">B</td>
+            <td>C</td>
 
         </tr>
 
         <tr>
-            <td>D</td>   <td>F</td>
+            <td class="myclass1">D</td>
+            <td>F</td>
 
         </tr>
-        
+
         <tr>
-<td>G</td>   <td>I</td>
+            <td>G</td>
+            <td>I</td>
         </tr>
 
 
         <tr>
-<td colspan="2">J</td>  <td>L</td>
+            <td colspan="2">J</td>
+            <td>L</td>
 
         </tr>
 
     </table>
-    
+
+
+    <table dir="rtl" class="myclass1">
+        <tr>
+            <th>1</th>
+            <td rowspan="2">2</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <th>4</th>
+            <td>6</td>
+        </tr>
+        <tr>
+            <th>7</th>
+            <td style="background-color: blanchedalmond;">#FF0000</td>
+            <td>9</td>
+        </tr>
+    </table>
+
+
+    <table>
+        <colgroup>
+            <col span="1" style="background-color:red">
+            <col span="2" >
+            <col span="1" style="background-color:yellow">
+        </colgroup>
+
+<tfoot>
+    <tr><td>X</td><td>Y</td><td>Z</td><td>W</td></tr>
+
+</tfoot>
+
+<tbody>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+        <tr><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+</tbody>
+
+        <thead>
+    <tr><td>A</td><td>B</td><td>C</td><td>D</td></tr>
+</thead>
+
+    </table>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum quas labore, nihil maiores cumque saepe illo ad deserunt eveniet dignissimos culpa fugiat assumenda quia, voluptatem facere ipsa totam quis voluptas.</p>
+
 </body>
+
 </html>
