@@ -5,13 +5,116 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Summer 2025-2026 Files</title>
+
+    <style>
+.flex-container {
+  display: flex;
+  justify-content: left;
+  margin-left: 80px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: linear-gradient(90deg, #333, #555);
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+li {
+  float: auto;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 25px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+li a:hover {
+  background-color: #00a8ff;
+  transform: scale(1.1);
+  border-radius: 10px;
+}
+    </style>
 </head>
 
 <body>
 
-    <h1>Pages in the Folder ...</h1>
+    <!--Nav Bar Start-->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+          <button class="dropbtn">HTML
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="links.html">Links</a>
+            <a href="tables.html">Tables</a>
+            <a href="picture.html">Picture</a>
+            <a href="lists.html">Lists</a>
+            <a href="blockinline.html">Block-Inline</a>
+            <a href="class.html">Class</a>
+        <a href="id.html">ID</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">CSS
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="style_01.html">CSS Exampel 1</a>
+            <a href="style_02.html">CSS Exampel 2</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">JS
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="querystringJS.html">Get Query String using JS</a>
+            <a href="js1.html">JS 1</a>
+            <a href="js2.html">JS 2</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Templates
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="template.html">HTML Page Template</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Students Projects
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Projects <span style="color: red;">( Offline Only )</span></a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">External Links
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a class="extlink" href="https://www.interviewbit.com/html-cheat-sheet/" target="_blank" title="External">HTML Cheat Sheet <i class="fa fa-external-link"></i></a>
+          </div>
+        </div>
+    </div>
+</nav>
+<!--Nav Bar End-->
 
-    <ul id="fileList"></ul>
+    <h1>Web 1 Course: Summer 2025-2026 Pages</h1>
+
+    <nav class="flex-container">
+        <ul id="fileList"></ul>
+    </nav>
 
     <script>
         const owner = "nazeehgh";
@@ -20,14 +123,26 @@
         const branch = "main";
 
         fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`)
-            .then(response => response.json())
-            .then(files => {
-                const list = document.getElementById("fileList");
+    .then(response => response.json())
+    .then(files => {
+        const list = document.getElementById("fileList");
 
-                files
-                    .filter(file => file.name.toLowerCase().endsWith(".html"))
-                    .sort((a, b) => a.name.localeCompare(b.name))
-                    .forEach(file => {
+        files
+            .filter(file => file.name.toLowerCase().endsWith(".html"))
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .forEach(file => {
+
+                // Read the HTML file content
+                fetch(file.download_url)
+                    .then(response => response.text())
+                    .then(html => {
+
+                        // Extract <title>
+                        const match = html.match(/<title>(.*?)<\/title>/i);
+
+                        const pageTitle = match 
+                            ? match[1] 
+                            : file.name.replace(".html", "");
 
                         const li = document.createElement("li");
                         const a = document.createElement("a");
@@ -35,14 +150,41 @@
                         // Link to GitHub Pages page
                         a.href = file.name;
 
-                        // Remove .html from displayed name
-                        a.textContent = file.name.replace(".html", "");
+                        // Display page title instead of file name
+                        a.textContent = pageTitle;
 
                         li.appendChild(a);
                         list.appendChild(li);
+
                     });
-            })
-            .catch(err => console.error(err));
+            });
+    })
+    .catch(err => console.error(err));
+
+        // fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`)
+        //     .then(response => response.json())
+        //     .then(files => {
+        //         const list = document.getElementById("fileList");
+
+        //         files
+        //             .filter(file => file.name.toLowerCase().endsWith(".html"))
+        //             .sort((a, b) => a.name.localeCompare(b.name))
+        //             .forEach(file => {
+
+        //                 const li = document.createElement("li");
+        //                 const a = document.createElement("a");
+
+        //                 // Link to GitHub Pages page
+        //                 a.href = file.name;
+
+        //                 // Remove .html from displayed name
+        //                 a.textContent = file.name.replace(".html", "");
+
+        //                 li.appendChild(a);
+        //                 list.appendChild(li);
+        //             });
+        //     })
+        //     .catch(err => console.error(err));
 
         //     files
         //         .filter(file => file.name.endsWith(".html"))
