@@ -1,43 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Summer 2025-2026 Files</title>
 </head>
+
 <body>
 
     <h1>Pages in the Folder ...</h1>
-   
+
     <ul id="fileList"></ul>
 
-<script>
-const owner = "nazeehgh";
-const repo = "web1";
-const path = "web_sum2526";   // folder containing HTML files
-const branch = "main";
+    <script>
+        const owner = "nazeehgh";
+        const repo = "web1";
+        const path = "web_sum2526";   // folder containing HTML files
+        const branch = "main";
 
-fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`)
-    .then(response => response.json())
-    .then(files => {
-        const list = document.getElementById("fileList");
+        fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`)
+            .then(response => response.json())
+            .then(files => {
+                const list = document.getElementById("fileList");
 
-        files
-            .filter(file => file.name.endsWith(".html"))
-            .forEach(file => {
-                const li = document.createElement("li");
-                const a = document.createElement("a");
+                files
+                    .filter(file => file.name.toLowerCase().endsWith(".html"))
+                    .sort((a, b) => a.name.localeCompare(b.name))
+                    .forEach(file => {
 
-                a.href = `https://${owner}.github.io/${repo}/${path}/${file.name}`;
-                a.textContent = file.name;
+                        const li = document.createElement("li");
+                        const a = document.createElement("a");
 
-                li.appendChild(a);
-                list.appendChild(li);
-            });
-    })
-    .catch(err => console.error(err));
-</script>
+                        // Link to GitHub Pages page
+                        a.href = file.name;
+
+                        // Remove .html from displayed name
+                        a.textContent = file.name.replace(".html", "");
+
+                        li.appendChild(a);
+                        list.appendChild(li);
+                    });
+            })
+            .catch(err => console.error(err));
+
+        //     files
+        //         .filter(file => file.name.endsWith(".html"))
+        //         .forEach(file => {
+        //             const li = document.createElement("li");
+        //             const a = document.createElement("a");
+
+        //             a.href = `https://${owner}.github.io/${repo}/${path}/${file.name}`;
+        //             a.textContent = file.name;
+
+        //             li.appendChild(a);
+        //             list.appendChild(li);
+        //         });
+        // })
+        // .catch(err => console.error(err));
+    </script>
 
 
 </body>
+
 </html>
