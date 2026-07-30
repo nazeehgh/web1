@@ -7,10 +7,44 @@
 </head>
 <body>
 
-    <form action="">
-        <input id="un" name="un1" type="text">
-        <input id="up" name="up1" type="password">
-        <input type="submit">
+    <!-- novalidate target="_blank" -->
+    <form action="" method="get" autocomplete="on">
+        <label for="sel1">Choose a car:</label>
+        <select name="sel1" id="sel1" size="2" multiple>
+            <option value="op1">Car 1</option>
+            <option value="op2">Car 2</option> 
+            <option value="op3" selected>Car 3</option>
+            <option value="op4">Car 4</option>
+        </select>
+        <br>
+
+        <textarea name="message" rows="10" cols="30">
+The cat was playing in the garden.
+</textarea>
+<br>
+        
+        <label for="un">Name:</label>
+        <input id="un" name="un1" type="text" placeholder="Enter Your Name"> <br>
+        <label for="up">Password:</label>
+        <input id="up" name="up1" type="password" placeholder="Enter your password"><br>
+        <input type="file" name="file1" id="file1"><br>
+        <input type="datetime-local" name="date1" id=""><br>
+        <input type="email" name="em1" id=""><br>
+        <input type="number" name="n1" id=""><br><br>
+         <label for="">Choice 1</label><input type="radio" name="r1" id="r1" value="abc"><br>
+         <label for="">Choice 2</label><input type="radio" name="r1" id="r2" value="def"><br>
+         <label for="">Choice 3</label><input type="radio" name="r2" id="r3"><br>
+         <label for="">Choice 4</label><input type="radio" name="r2" id="r4"><br>
+         <input type="checkbox" name="" id="">
+         <input type="checkbox" name="" id="">
+    
+        
+        
+        <br><br>
+
+        <input type="submit" value="Send Data" >
+        <input type="reset" name="" id="" value="Clear">
+        <input type="button" onclick="alert('Test');" name="" id="" value="Send">
     </form>
     
 </body>
