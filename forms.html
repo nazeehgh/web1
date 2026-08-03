@@ -29,7 +29,7 @@ The cat was playing in the garden.
         <input id="up" name="up1" type="password" placeholder="Enter your password"><br>
         <input type="file" name="file1" id="file1"><br>
         <input type="datetime-local" name="date1" id=""><br>
-        <input type="email" name="em1" id=""><br>
+        <input type="email" name="em1" id="" readonly><br>
         <input type="number" name="n1" id=""><br><br>
          <label for="">Choice 1</label><input type="radio" name="r1" id="r1" value="abc"><br>
          <label for="">Choice 2</label><input type="radio" name="r1" id="r2" value="def"><br>
@@ -46,6 +46,19 @@ The cat was playing in the garden.
         <input type="reset" name="" id="" value="Clear">
         <input type="button" onclick="alert('Test');" name="" id="" value="Send">
     </form>
+
+    <form action="index.html"
+  oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+  0
+  <input type="range"  id="a" name="a" value="50">
+  100 +
+  <input type="number" id="b" name="b" value="50">
+  =
+  <output name="x" for="a b"></output>
+  <br><br>
+  <input type="submit">
+</form>
+
     
 </body>
 </html>
