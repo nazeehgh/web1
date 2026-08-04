@@ -9,13 +9,44 @@
 
     <button onclick="fun1();">Click to Show Time</button>
     <div id="d1">This is my div 1</div>
-
+<button onclick="changeText();" >Change Text</button>
+<button onclick="changeHTML();" >Change HTML</button>
+<button onclick="writeHTML();">Doc Write </button>
+<button onclick="consWrite();">Console Write</button>
+<button onclick="printmypage();">Print This Page</button>
 
     <script>
         function fun1(){
             // alert("test");
             // document.getElementById("d1").innerText = Date();
             document.getElementById("d1").innerText = Date();
+        }
+
+
+        function changeText(){
+            document.getElementById('d1').innerText = "This is <b>text</b>";
+        }
+
+        function changeHTML(){
+            document.getElementById('d1').innerHTML = "This is <b>text</b>";
+        }
+
+        function writeHTML()
+        {
+            document.write('this is my text <b>this is bold text</b>');
+        }
+
+
+        function consWrite(){
+            x = 44;
+            console.log(x);
+            alert(x);
+            // console.log('this is my console method.');
+        }
+
+        function printmypage(){
+            document.write('This is my new page');
+            window.print();
         }
     </script>
 
