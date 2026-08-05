@@ -14,19 +14,19 @@
     <script>
 
 
-        function fun1() {
+        function fun1(){
             const d = new Date();
 
             // alert("test");
             // document.getElementById("d1").innerText = Date();
             document.getElementById("d1").innerText =
-                d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear();
+                d.getDate() + "/" + (d.getMonth() +1 ) + "/" + d.getFullYear();
 
             document.getElementById("d1").innerText += "\n" +
                 d.getMinutes() + ":" + d.getSeconds() + ":" + d.getMilliseconds();
 
             document.getElementById("d1").innerText += "\n" +
-            new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(new Date());
+            new Intl.DateTimeFormat('en-US', { weekday: 'short' }).format(new Date());
 
         }
 
