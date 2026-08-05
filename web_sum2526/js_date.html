@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Date Time</title>
+</head>
+
+<body>
+    <button onclick="fun1();">Click to Show Time</button>
+    <div id="d1">This is my div 1</div>
+
+    <script>
+
+
+        function fun1() {
+            const d = new Date();
+
+            // alert("test");
+            // document.getElementById("d1").innerText = Date();
+            document.getElementById("d1").innerText =
+                d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear();
+
+            document.getElementById("d1").innerText += "\n" +
+                d.getMinutes() + ":" + d.getSeconds() + ":" + d.getMilliseconds();
+
+            document.getElementById("d1").innerText += "\n" +
+            new Intl.DateTimeFormat('en-US', { weekday: 'long' }).format(new Date());
+
+        }
+
+        // // 1. Create a reusable delay helper function
+        // const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+        // async function runLoopWithTimer() {
+        //     for (let i = 1; i <= 20; i++) {
+        //         console.log(`Iteration ${i}`);
+        //         fun1();
+
+        //         // 2. Pause the loop execution for 1000 milliseconds (1 second)
+        //         await delay(1000);
+        //     }
+        //     console.log("Loop finished!");
+        // }
+
+        // runLoopWithTimer();
+
+
+
+    </script>
+
+</body>
+
+</html>
