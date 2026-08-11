@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let Var Cont JS</title>
+    </head>
+
+    <div id="out1"></div>
+    
+    <body>
+        <script>
+
+document.getElementById("out1").innerHTML =
+'3' + 2 + 1 ;
+
+document.getElementById("out1").innerHTML +=
+'<br>' ;
+document.getElementById("out1").innerHTML +=
+'3' + '2' + '1' ;
+document.getElementById("out1").innerHTML +=
+'<br>' ;
+document.getElementById("out1").innerHTML +=
+'3' + '2 + 1' ;
+document.getElementById("out1").innerHTML +=
+'<br>' ;
+document.getElementById("out1").innerHTML +=
+'3' + (2 + 1)  ;
+document.getElementById("out1").innerHTML +=
+'<br>' ;
+document.getElementById("out1").innerHTML +=
+2 + (1  + '3') ;
+
+            // try{
+            // const x = 10;
+            // // Here x is 10
+
+            
+            // // x =4;
+            
+            // // {
+            // //    let  x = 2;
+            // //     // Here x is 2
+            // // }
+
+            
+            // // Here x is 10
+            // document.getElementById("out1").innerHTML = x;
+            // }
+            // catch(err)
+            // {
+            //     document.getElementById("out1").innerHTML = err.message;
+            // }
+
+//////////////////////////////// Hoisting Example
+            // try{
+            //     y = 5;
+                        
+            // document.getElementById("out1").innerHTML = y;
+            // }
+            // catch(err)
+            // {
+            //     document.getElementById("out1").innerHTML = err.message;
+            // }
+
+            // var y = 6;
+            // // let y = 8;
+            // document.getElementById("out1").innerHTML += " after " + y;
+
+
+            </script>
+    </body>
+    
+    </html>
