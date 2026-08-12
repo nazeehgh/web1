@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Operators</title>
+</head>
+<body>
+    <div id="d1"></div>
+    <script>
+        document.getElementById("d1").innerHTML =
+        5 ** 2
+        + " | " +
+        Math.pow(5,2);
+
+        document.getElementById("d1").innerHTML =
+        4 + 6 * (6 / 2) ** 3;
+
+        let x = 7;
+        x  %= 3;
+        document.getElementById("d1").innerHTML =
+        x;
+
+        let y = 'ABC';
+        y  += ' DEF';
+        document.getElementById("d1").innerHTML =
+        y;
+
+        document.getElementById("d1").innerHTML =
+        4 == 6;
+        
+        document.getElementById("d1").innerHTML =
+        true && false  + " | " + true || false;
+
+        let w = false;
+        let z = w &&= 10;
+        document.getElementById("d1").innerHTML =
+        z;
+
+        let a = false;
+        let b = a ||= 10;
+        document.getElementById("d1").innerHTML =
+        "a= " + a + ", b= " + b;
+
+        let c = true, d= false;// d= 0/2;
+        c ||= 10;
+        d ||= 5;
+        document.getElementById("d1").innerHTML =
+        "c= " + c + ", d=" + d;
+
+        let e = true, f= false;
+        e &&= 10;
+        f &&= 5;
+        document.getElementById("d1").innerHTML =
+        "e= " + e + ", f=" + f;
+
+        let g, h = 6;
+        g ??= 10;
+        h ??= 3;
+        document.getElementById("d1").innerHTML =
+            "g= " + g + ", h=" + h;
+
+       
+        let i = 'null';
+        i ??= 55;
+        document.getElementById("d1").innerHTML =
+            "i= " + i;
+
+        document.getElementById("d1").innerHTML =
+            5 !== '5';
+
+          document.getElementById("d1").innerHTML ='';  
+
+            if(1 == 1)
+                        document.getElementById("d1").innerHTML =
+                    'yes'
+            ;
+
+         document.getElementById("d1").innerHTML =
+         'hello' == 'Hello';  
+
+
+    </script>
+</body>
+</html>
