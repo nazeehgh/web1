@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Conditions</title>
+</head>
+<input type="text" id="in1" >
+<button onclick="getval();">Click</button>
+<p>
+    Your x is <span id="out"></span>. hello.
+</p>
+
+<p id="out2"></p>
+<body>
+    <script>
+//         let x;
+//         (false? x= 4 : x = 2)
+
+//         document.getElementById('out').innerHTML = x;
+   
+//    let y, i;
+//    i = 18;
+//         (i >= 18 ? y= 'Yes' : y = 'No')
+
+//         document.getElementById('out').innerHTML = y;
+let condition = true;
+
+    if (condition) {
+        document.getElementById('out2').innerHTML =
+            'True...';
+        if (!condition)
+            document.getElementById('out2').innerHTML +=
+                'yes';
+    }
+    // console.log('line33')
+    else {
+        document.getElementById('out2').innerHTML +=
+            'False...';
+    }
+
+    function getval(){
+    let v =  document.getElementById('in1').value ;
+    document.getElementById('out2').innerHTML = v;
+    }
+   
+   </script>
+</body>
+</html>
