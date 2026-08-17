@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Conditions</title>
+
+<style>
+    .mycolor{
+        background-color: red;
+        color: beige;
+    }
+</style>
+
+
 </head>
 <input type="text" id="in1" >
 <button onclick="getval();">Click</button>
@@ -14,16 +23,25 @@
 <p id="out2"></p>
 <body>
     <script>
-//         let x;
-//         (false? x= 4 : x = 2)
 
-//         document.getElementById('out').innerHTML = x;
+        // document.getElementById('out').innerHTML = "this <b>is my</b> span";
+        // // document.getElementById('out').style = "background-color: lightgreen;";
+        // document.getElementById('out').className = "mycolor";
+
+
+        // let x;
+        // (false? x= 4 : x = 2)
+
+        // out2.innerHTML = "445454545";
+
+        // document.getElementById('out').innerHTML = x;
    
 //    let y, i;
 //    i = 18;
 //         (i >= 18 ? y= 'Yes' : y = 'No')
 
 //         document.getElementById('out').innerHTML = y;
+/*
 let condition = true;
 
     if (condition) {
@@ -38,12 +56,13 @@ let condition = true;
         document.getElementById('out2').innerHTML +=
             'False...';
     }
-
-    function getval(){
+ */
+   
+ function getval(){
     let v =  document.getElementById('in1').value ;
     document.getElementById('out2').innerHTML = v;
     }
-   
+  
    </script>
 </body>
 </html>
