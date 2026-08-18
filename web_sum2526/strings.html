@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings JS</title>
+</head>
+<body>
+    <p id="out"></p>
+    <button onclick="update();">Click Here</button>
+
+
+    <script>
+
+        let x = ' - HOW ARE YOU - ';
+
+
+        function update(){
+        // let mytext = "Hello there 'I am a student'.";
+        // let mytext = 'Hello there "I am a student".';
+        // let mytext = "Hello there \"I am a student\".";
+        // let mytext = `Hello there I ${x} am a student`;
+
+        // let mytext = "Hello there I " +  `${ 4 + 5 }` +  " am a student";
+        // let mytext = `Hello there I ${ 4 + 5 } am a student`;
+        let mytext = 'AB    C\n DEF';
+
+        
+
+        document.getElementById('out').innerHTML = mytext;
+        document.getElementById('out').innerText += " --> Length=" + mytext.length;
+
+        }
+    </script>
+</body>
+</html>

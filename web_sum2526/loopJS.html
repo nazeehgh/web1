@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops JS</title>
+</head>
+<body>
+
+    <div id="carso"></div>
+    
+    <script>
+        const cars = ["Saab", "Mazda", "Volvo", "BMW", "Toyota"];
+        let carCollection = '';
+        csize = cars.length -1;
+
+        // carCollection = cars[0] + ' ';
+        // carCollection += cars[1] + ' ';
+        // carCollection += cars[2] + ' ';
+
+        for(i=0; i<=csize;i++)
+        carCollection += cars[csize-i] + ' ';
+
+        document.getElementById('carso').innerText = carCollection;
+
+        let j = 5;
+
+for (j = 0; j < 10; j++) {
+//   document.getElementById('carso').innerText += j;
+
+}
+document.getElementById('carso').innerText = j;
+
+
+    </script>
+</body>
+</html>
